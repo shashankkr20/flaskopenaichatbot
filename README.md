@@ -85,6 +85,6 @@ def result(result):
 
 ## Screenshots
 
-![Request](https://github.com/pandiji/flaskopenaichatbot/photo/login.png)
+![Request](/photo/login.png)
 
-![Response](https://github.com/pandiji/flaskopenaichatbot/photo/home.png)
+![Response](/photo/home.png)
