@@ -9,7 +9,8 @@ app=Flask(__name__)
 def home():
     if request.method=="POST":
         prompt=request.form["promptmsg"]
-        gptreply=gpt.gpt_reply(prompt)
+        gptreply="The largest animal in the world is the blue whale (Balaenoptera musculus). These magnificent creatures can grow up to 100 feet (30 meters) in length and weigh as much as 200 tons (181 metric tons). Despite their enormous size, blue whales feed mostly on tiny shrimp-like animals called krill, which they filter from the water using a specialized structure called baleen. Blue whales are found in oceans around the world, and are considered an endangered species due to past hunting and current threats such as climate change and habitat loss."
+        #gpt.gpt_reply(prompt)
         # print(gptreply)
         return redirect(url_for("result",result=gptreply))
     else:
