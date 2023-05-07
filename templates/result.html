@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        * {
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                border-bottom: 1px solid black;
+                width: 100%;
+                display: flex;
+                position: fixed;
+                top: 0;
+                align-items: center;
+                padding: 1em;
+                /* background-color: #fff; */
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                background-color: rgb(78, 87, 87);
+            }
+            header>span{
+                font-size: x-large;
+                color: #ffff;
+
+            }
+            .resultbody{
+                background-color: #efefef;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 8vh;
+                width: 100%;
+                height: 92vh;
+            }
+            .result{
+                width: 50vw;
+                min-height: 50vh;
+                height: max-content;
+                background-color: #fff;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            }
+            .result>.title{
+                width: 90%;
+                color: rgb(179, 57, 17);
+                margin: auto;
+                border-bottom: 1px solid black;
+                    font-size: larger;
+                    font-weight: 500;
+                    padding: 10px;
+                    /* text-align: center; */
+            }
+            .result>.response{
+                width: 90%;
+                color: rgb(17, 60, 86);
+                margin: auto;
+               font-size: large;
+                    padding: 10px;
+                    /* text-align: center; */
+            }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <span class="">Chatbot</span>
+    </header>
+   
+    <div class="resultbody">
+
+        <div class="result">
+                {% if prompt %}
+                <p class="title">Response:</p>
+                <p class="response">{{prompt}} </p>
+            {% endif %}
+        </div>
+    </div>
+    
+     
+</body>
+</html>

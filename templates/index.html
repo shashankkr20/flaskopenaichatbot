@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+                    * {
+                margin: 0;
+                padding: 0;
+            }
+            header{
+                border-bottom: 1px solid black;
+                width: 100%;
+                display: flex;
+                position: fixed;
+                top: 0;
+                align-items: center;
+                padding: 1em;
+                /* background-color: #fff; */
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                background-color: rgb(78, 87, 87);
+            }
+            header>span{
+                font-size: x-large;
+                color: #ffff;
+
+            }
+            .chatbody{
+                background-color: #efefef;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 8vh;
+                width: 100%;
+                height: 92vh;
+            }
+            .chatbody>form{
+
+                display: flex;
+            }
+            .promptmsg{
+                display: block;
+                padding: 10px;
+                width: 50vw;
+            }
+            .submitbtn{
+                color: #ffff;
+                font-weight: 500;
+                background-color: #3eac7a;
+                cursor: pointer;
+                padding: 5px;
+                transition: background-color .5s ease-in;
+            }
+            .submitbtn:hover{
+                background-color: #f7ce39;
+                color: blue;
+            }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="">
+        <span class="">Chatbot</span>
+    </header>
+    <div class="chatbody">
+        <form action="#" method="post">
+            <input type="text"  class="promptmsg" placeholder="Enter the prompt message" name="promptmsg">
+            <input type="submit" class="submitbtn">
+        </form>
+    </div>
+</body>
+</html>
