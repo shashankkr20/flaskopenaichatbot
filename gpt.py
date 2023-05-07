@@ -1,24 +1,28 @@
 import openai
 
-openai.api_key="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"
+import os
+
+openai.api_key=os.environ.get('OPENAI_API_KEY')
 
 # inputs="largest animal of planet"
 
 def gpt_reply(input):
 
-    # prompt to provide context for user input
-    prompt = f"Please complete the following sentence: '{input}'"
+ 
 
     # Calling the OpenAI GPT-3 API to generate a response based on user prompt
     try:
         response = openai.Completion.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "user", "content": "'{prompt}'"}
-            ]
+            engine="davinci",
+            prompt=input,
+            max_tokens=1024,
+            n=1,
+            stop=None,
+            temperature=0.7
         )
-        message = response.choices[0].message.content
-        return message
+        if response and len(response.choices) > 0:
+            return response.choices[0].text
+        else:
+            return None
     except Exception as e:
-        message = f"Error: {e}"
-        return message
+        raise ValueError("Failed to generate text: " + str(e))
