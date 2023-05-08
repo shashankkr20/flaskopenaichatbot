@@ -13,7 +13,7 @@ def gpt_reply(input):
     # Calling the OpenAI GPT-3 API to generate a response based on user prompt
     try:
         response = openai.Completion.create(
-            engine="davinci",
+            engine="text-davinci-002",
             prompt=input,
             max_tokens=1024,
             n=1,
@@ -21,7 +21,7 @@ def gpt_reply(input):
             temperature=0.7
         )
         if response and len(response.choices) > 0:
-            return response.choices[0].text
+            return response.choices[0].text.strip()
         else:
             return None
     except Exception as e:
